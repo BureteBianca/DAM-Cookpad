@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">cookpad</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_inregistrare">Inregistrare</string>
+    <string name="btn_conectare">Conectare</string>
+    <string name="chk_ingrediente">Cauta dupa retete sau ingrediente</string>
+    <string name="btn_reteta">Creare reteta</string>
+    <string name="btn_Login">Login</string>
+</resources>
