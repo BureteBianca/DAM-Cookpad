@@ -6,4 +6,21 @@
     <string name="chk_ingrediente">Cauta dupa retete sau ingrediente</string>
     <string name="btn_reteta">Creare reteta</string>
     <string name="btn_Login">Login</string>
+    <string name="hnNume">Nume utilizator</string>
+    <string name="hnEmail">Email</string>
+    <string name="hnParola">Parola</string>
+    <string name="hnConfParola">Confirma parola</string>
+    <string name="btnCrCont">Creare cont</string>
+    <string name="hhEmail">Email</string>
+    <string name="hParola">Parola</string>
+    <string name="hNume">Nume utilizator</string>
+    <string name="hEmail">Email</string>
+    <string name="hhParola">Parola</string>
+    <string name="hConfParola">Confirmare parola</string>
+    <string name="hhhhEmail">Email</string>
+    <string name="hhhParola">Parola</string>
+    <string name="hhhhhhNume">Nume</string>
+    <string name="hhhhhhEmail">Adresa de email</string>
+    <string name="tAdresa">Adresa de email</string>
+    <string name="tParola">Parola</string>
 </resources>
