@@ -37,12 +37,11 @@ public class MainActivity extends AppCompatActivity {
         btn_conectare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MainActivity3.class);
-           // startActivity(intent);
-                Bundle but= new Bundle();
-                but.putSerializable("cont", cont);
-                intent.putExtra("transfer",but);
-                startActivity(intent);
+                    Bundle but = new Bundle();
+                    but.putSerializable("cont", cont);
+                    Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                    intent.putExtra("transfer", but);
+                    startActivity(intent);
             }
         });
         btn_inregistrare.setOnClickListener(new View.OnClickListener() {
