@@ -16,9 +16,11 @@ import java.util.List;
 public class MeniuAdapter extends BaseAdapter {
 
         private List<Model> lista;
+        private int[] images;
 
-    public MeniuAdapter(List<Model> lista){
+    public MeniuAdapter(List<Model> lista, int[] images){
             this.lista=lista;
+            this.images=images;
         }
         @Override
         public int getCount() {
@@ -39,13 +41,11 @@ public class MeniuAdapter extends BaseAdapter {
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater infl= LayoutInflater.from(parent.getContext());
             View itemView= infl.inflate(R.layout.activity_meniu_adapter,parent,false);
+            ImageView t_imag=itemView.findViewById((R.id.poza));
             TextView t_nume = itemView.findViewById(R.id.nume);
-            TextView t_ingrediente = itemView.findViewById(R.id.ingrediente);
-            TextView t_reteta = itemView.findViewById(R.id.reteta);
             Model current = lista.get(position);
+            t_imag.setImageResource(images[position]);
             t_nume.setText(current.getNume());
-            t_ingrediente.setText(current.getIngrediente());
-            t_reteta.setText(current.getReteta());
             return itemView;
         }
         public void updateList(List<Model> list){
