@@ -16,9 +16,9 @@ import java.util.List;
 public class MeniuAdapter extends BaseAdapter {
 
         private List<Model> lista;
-        private int[] images;
+        private List<Integer> images;
 
-    public MeniuAdapter(List<Model> lista, int[] images){
+    public MeniuAdapter(List<Model> lista , List<Integer> images){
             this.lista=lista;
             this.images=images;
         }
@@ -44,13 +44,14 @@ public class MeniuAdapter extends BaseAdapter {
             ImageView t_imag=itemView.findViewById((R.id.poza));
             TextView t_nume = itemView.findViewById(R.id.nume);
             Model current = lista.get(position);
-            t_imag.setImageResource(images[position]);
+            t_imag.setImageResource(images.get(position));
             t_nume.setText(current.getNume());
             return itemView;
         }
-        public void updateList(List<Model> list){
-            this.lista.clear();
+        public void updateList(List<Model> list, List<Integer> images){
+//            this.lista.clear();
             this.lista.addAll(list);
+            this.images.addAll(images);
             notifyDataSetChanged();
         }
     }

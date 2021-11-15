@@ -31,33 +31,33 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity3.this,MainActivity4.class);
-                 startActivity(intent);
-                //startActivityForResult(intent,mainActivityRequest);
+                // startActivity(intent);
+                startActivityForResult(intent,mainActivityRequest);
             }
         });
 
-       if (isValid()) {
-            Intent intent = getIntent();
-            Bundle bu = intent.getBundleExtra("transfer");
-            Cont cont1 = (Cont) bu.getSerializable("cont");
-            Toast.makeText(MainActivity3.this, cont1.toString(), Toast.LENGTH_SHORT).show();
-            email.setText(cont1.getEmail());
-            parola.setText(cont1.getParola());
-        }
+       //if (isValid()) {
+           // Intent intent = getIntent();
+           // Bundle bu = intent.getBundleExtra("transfer");
+           // Cont cont1 = (Cont) bu.getSerializable("cont");
+            //Toast.makeText(MainActivity3.this, cont1.toString(), Toast.LENGTH_SHORT).show();
+           // email.setText(cont1.getEmail());
+            //parola.setText(cont1.getParola());
+        //}
 
     }
 
-   private boolean isValid() {
-        if (email.getText().toString().isEmpty()) {
-           Toast.makeText(MainActivity3.this, "Completati email", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        if (parola.getText().toString().isEmpty()) {
-           Toast.makeText(MainActivity3.this, "Completati parola", Toast.LENGTH_SHORT).show();
-            return false;
-       }
-        else return true;
-    }
+   //private boolean isValid() {
+        //if (email.getText().toString().isEmpty()) {
+          // Toast.makeText(MainActivity3.this, "Completati email", Toast.LENGTH_SHORT).show();
+           // return false;
+       // }
+       // if (parola.getText().toString().isEmpty()) {
+          // Toast.makeText(MainActivity3.this, "Completati parola", Toast.LENGTH_SHORT).show();
+          //  return false;
+      // }
+       // else return true;
+    //}
 
 
 }
