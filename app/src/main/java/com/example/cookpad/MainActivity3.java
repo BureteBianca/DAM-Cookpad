@@ -1,14 +1,12 @@
 package com.example.cookpad;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity3 extends AppCompatActivity {
 
@@ -36,27 +34,27 @@ public class MainActivity3 extends AppCompatActivity {
             }
         });
 
-       //if (isValid()) {
-           // Intent intent = getIntent();
-           // Bundle bu = intent.getBundleExtra("transfer");
-           // Cont cont1 = (Cont) bu.getSerializable("cont");
-            //Toast.makeText(MainActivity3.this, cont1.toString(), Toast.LENGTH_SHORT).show();
-           // email.setText(cont1.getEmail());
-            //parola.setText(cont1.getParola());
+        //if (isValid()) {
+        // Intent intent = getIntent();
+        // Bundle bu = intent.getBundleExtra("transfer");
+        // Cont cont1 = (Cont) bu.getSerializable("cont");
+        //Toast.makeText(MainActivity3.this, cont1.toString(), Toast.LENGTH_SHORT).show();
+        // email.setText(cont1.getEmail());
+        //parola.setText(cont1.getParola());
         //}
 
     }
 
-   //private boolean isValid() {
-        //if (email.getText().toString().isEmpty()) {
-          // Toast.makeText(MainActivity3.this, "Completati email", Toast.LENGTH_SHORT).show();
-           // return false;
-       // }
-       // if (parola.getText().toString().isEmpty()) {
-          // Toast.makeText(MainActivity3.this, "Completati parola", Toast.LENGTH_SHORT).show();
-          //  return false;
-      // }
-       // else return true;
+    //private boolean isValid() {
+    //if (email.getText().toString().isEmpty()) {
+    // Toast.makeText(MainActivity3.this, "Completati email", Toast.LENGTH_SHORT).show();
+    // return false;
+    // }
+    // if (parola.getText().toString().isEmpty()) {
+    // Toast.makeText(MainActivity3.this, "Completati parola", Toast.LENGTH_SHORT).show();
+    //  return false;
+    // }
+    // else return true;
     //}
 
 

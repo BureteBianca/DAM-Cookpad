@@ -1,16 +1,13 @@
 package com.example.cookpad;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class MainActivity4 extends AppCompatActivity {
 
@@ -44,26 +41,26 @@ public class MainActivity4 extends AppCompatActivity {
         lv = findViewById(R.id.listView);
         lv.setAdapter(meniuAdapter);
 
-       // lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-         //   @Override
-           // public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-             //   Random rnd = new Random(2);
-             //   int rand_int = rnd.nextInt();
-               // if(rand_int%2==0){
-                  //  meniuAdapter.updateList(getModele());
-               // }
-              // else{
-                  // meniuAdapter.updateList(getModele2());
-               // }
-           // }
-      //  });
-       // lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-          //  @Override
-           // public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-              //  Toast.makeText(MainActivity4.this,meniuAdapter.getItem(position).toString(), Toast.LENGTH_LONG).show();
-              //  return false;
-           // }
-       // });
+        // lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //   @Override
+        // public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        //   Random rnd = new Random(2);
+        //   int rand_int = rnd.nextInt();
+        // if(rand_int%2==0){
+        //  meniuAdapter.updateList(getModele());
+        // }
+        // else{
+        // meniuAdapter.updateList(getModele2());
+        // }
+        // }
+        //  });
+        // lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        //  @Override
+        // public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        //  Toast.makeText(MainActivity4.this,meniuAdapter.getItem(position).toString(), Toast.LENGTH_LONG).show();
+        //  return false;
+        // }
+        // });
 
         JSONReader reader = new JSONReader();
         Thread thread = new Thread(new Runnable() {
@@ -74,9 +71,9 @@ public class MainActivity4 extends AppCompatActivity {
                     public void onSuccess(List<Model> preparat) {
                         runOnUiThread(new Runnable() {
                             @Override
-                           public void run() {
+                            public void run() {
 //                               Toast.makeText(MainActivity4.this, preparat.toString(), Toast.LENGTH_SHORT).show();
-                                 meniuAdapter.updateList(preparat,imag);
+                                meniuAdapter.updateList(preparat,imag);
                             }
                         });
                     }
@@ -85,9 +82,9 @@ public class MainActivity4 extends AppCompatActivity {
                     public void onError(String mesaj) {
                         runOnUiThread(new Runnable() {
                             @Override
-                           public void run() {
+                            public void run() {
                                 Toast.makeText(MainActivity4.this, mesaj, Toast.LENGTH_SHORT).show();
-                           }
+                            }
                         });
                     }
                 });
@@ -108,10 +105,10 @@ public class MainActivity4 extends AppCompatActivity {
         return lst;
     }
     //private List<Model> getModele2(){
-      //  List<Model> lst2 = new ArrayList<>();
-       // lst2.add(new Model("Paste cu ton"));
-       // lst2.add(new Model("Tochitura moldoveneasca"));
-       // lst2.add(new Model("Tortilla taraneasca"));
-       // return lst2;
-   // }
+    //  List<Model> lst2 = new ArrayList<>();
+    // lst2.add(new Model("Paste cu ton"));
+    // lst2.add(new Model("Tochitura moldoveneasca"));
+    // lst2.add(new Model("Tortilla taraneasca"));
+    // return lst2;
+    // }
 }
