@@ -1,5 +1,6 @@
 package com.example.cookpad;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -19,12 +20,24 @@ public class MainActivity5 extends AppCompatActivity {
         utilizatorDAO = Database.getInstance(this).getDataBase().utilizatorDAO();
 
         List<Utilizator> lista = getUtilizator();
-        for(int i=0;i<lista.size();i++){
-            utilizatorDAO.insert(lista.get(i));
-        }
+            AsyncTask.execute(new Runnable() {
+                @Override
+                public void run() {
+                    for (int i = 0; i < lista.size(); i++) {
+                        utilizatorDAO.insert(lista.get(i));
+                    }
+                }});
 
-        List<Utilizator> rezultat = utilizatorDAO.getUtilizatorVarstaHigher(14);
-        Log.v("varsta>", rezultat.toString());
+
+
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                List<Utilizator> rezultat = utilizatorDAO.getUtilizatorVarstaHigher(14);
+                Log.v("varsta>", rezultat.toString());
+            }
+        });
+
     }
 
     public List<Utilizator> getUtilizator(){
