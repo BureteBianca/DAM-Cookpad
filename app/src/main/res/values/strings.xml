@@ -23,4 +23,6 @@
     <string name="hhhhhhEmail">Adresa de email</string>
     <string name="tAdresa">Adresa de email</string>
     <string name="tParola">Parola</string>
+    <string name="Firename">Firename</string>
+    <string name="Firebase">Firebase</string>
 </resources>

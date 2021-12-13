@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_conectare;
     private Button btn_inregistrare;
     private Button btn_database;
+    private Button btn_firebase;
     private final int mainActivityRequest=100;
     private Cont cont;
 
@@ -31,11 +32,20 @@ public class MainActivity extends AppCompatActivity {
         btn_conectare=findViewById(R.id.buton_conectare);
         btn_inregistrare=findViewById(R.id.buton_inregistrare);
         btn_database=findViewById(R.id.btn_database);
+        btn_firebase=findViewById(R.id.btn_firebase);
 
         btn_database.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,MainActivity5.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_firebase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MainActivity6.class);
                 startActivity(intent);
             }
         });
